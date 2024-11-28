@@ -9,8 +9,8 @@ const Button = ({
 }: {
   title: string;
   id: string;
-  rightIcon: ReactElement;
-  leftIcon: ReactElement;
+  rightIcon?: ReactElement;
+  leftIcon?: ReactElement;
   containerClass: string;
 }) => {
   return (
