@@ -7,9 +7,11 @@ gsap.registerPlugin(ScrollTrigger);
 const AnimatedTitle = ({
   title,
   containerClass,
+  sectionId,
 }: {
   title: string;
   containerClass: string;
+  sectionId: string;
 }) => {
   const containerRef = useRef(null);
 
@@ -36,7 +38,11 @@ const AnimatedTitle = ({
   }, []);
 
   return (
-    <div ref={containerRef} className={`animated-title ${containerClass}`}>
+    <div
+      ref={containerRef}
+      className={`animated-title ${containerClass}`}
+      id={sectionId}
+    >
       {title.split("<br />").map((line, index) => (
         <div
           key={index}
